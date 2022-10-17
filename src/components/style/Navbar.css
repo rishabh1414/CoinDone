@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColorLight: #ffdd07;
+    --mainColor: #f1b308;
+    --mainColorDark: #be8d06;
+    --darkBlueLight: #0046a6;
+    --darkBlue: #002d67;
+    --darkBlueDark: #001634;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    top: 0;
+    background: transparent;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    z-index: 1;
+    transition: background 0.6s ease;
+}
+
+nav.active {
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    background-color: rgba(20, 27, 39, 0.519);
+}
+
+.logo {
+    cursor: pointer;
+    display: flex;
+}
+
+.logo img {
+    height: 52px;
+    border: 1px solid var(--mainColor);
+    padding: 5px;
+}
+
+
+.logo h1 {
+    font-size: 1.8em;
+    color: var(--mainColor);
+    border-bottom: 2px solid var(--mainColorDark);
+    line-height: 32px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.logo p {
+    font-size: 0.55em;
+    color: var(--mainColor);
+    line-height: 15px;
+    font-weight: 200;
+    word-spacing: 4px;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li .a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.landing {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing h1 {
+    margin: 100px;
+    font-size: 50px;
+    color: #ae5fce;
+}
+
+.link-effect-4 .a {
+    padding: 0 10px;
+    margin: 0 20px;
+    color: #fff;
+    text-shadow: none;
+    position: relative;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.link-effect-4 .a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    max-height: 0;
+    color: var(--mainColorDark);
+    content: attr(data-hover);
+    -webkit-transition: max-height 0.5s;
+    -moz-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+}
+
+.link-effect-4 .a:hover::before {
+    max-height: 100%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(17, 25, 40, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
+
+    .humberger {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 40px;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: -40px;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.84);
+        /* background-color: red; */
+        overflow: hidden;
+        height: 100vh;
+        width: 100%;
+        padding: 20%;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        font-size: 1.2em;
+
+    }
+
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+        background: rgba(0, 0, 0, 0.84);
+    }
+
+    .landing {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        opacity: 1;
+    }
+
+    .nav-links li.a {
+        font-size: 25px;
+        text-decoration: none;
+    }
+
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+
+    li.fade {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,182 @@
+:root {
+    --mainColorLight: #ffdd07;
+    --mainColor: #f1b308;
+    --mainColorDark: #be8d06;
+    --darkBlueLight: #0046a6;
+    --darkBlue: #002d67;
+    --darkBlueDark: #001634;
+}
+
+#contact {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #010c1bb3, #010c1bee), url('../../../public/images/contact01.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    background-attachment: fixed;
+    font-size: 18px;
+    color: white;
+}
+
+.mainContact {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+    margin: 10% 0;
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.519);
+    border-radius: 12px;
+    border: 1px solid var(--mainColor)
+}
+
+.contactForm {
+    width: 50%;
+}
+
+.contactForm form {
+    padding: 3% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm form input {
+    outline: none;
+    padding: 15px 20px;
+    background-color: transparent;
+    border: 0.1px solid rgba(255, 217, 0, 0.058);
+    border-bottom: 1px solid var(--mainColorDark);
+    margin: 20px 0px;
+    color: rgb(196, 173, 115);
+    font-size: 1em;
+
+}
+
+
+
+.contactForm form input:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px var(--mainColorLight);
+
+    border-bottom: 1px var(--mainColorDark);
+}
+
+.contactForm form input::placeholder {
+    color: white;
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+.contactForm form textarea::placeholder {
+    color: white;
+    font-size: 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+.contactForm form textarea {
+    resize: vertical;
+    outline: none;
+    height: 150px;
+    padding: 20px;
+    background-color: transparent;
+    border: 0.1px solid rgba(255, 217, 0, 0.058);
+    border-bottom: 1px solid var(--mainColorDark);
+    margin: 20px 0px;
+    margin-bottom: 50px;
+    color: rgb(196, 173, 115);
+    font-size: 1em;
+}
+
+.contactForm form textarea:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px var(--mainColorLight);
+
+    border-bottom: 1px var(--mainColorDark);
+}
+
+.contactForm form .outer__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    padding: 0;
+    height: 60px;
+    cursor: pointer;
+}
+
+.contactForm form .outer__button button {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 1.65em;
+    cursor: pointer;
+}
+
+.mainContact .right {
+    width: 50%;
+    padding: 5%;
+}
+
+.mainContact .right h4 {
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+.mainContact .right h3 {
+    font-size: 3.5em;
+    font-weight: 800;
+    -webkit-text-stroke-width: 2.5px;
+    -webkit-text-stroke-color: #002d67;
+    -webkit-text-fill-color: #f1b308;
+    margin: 20px 0;
+}
+
+.mainContact .right p {
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 868px) {
+    .mainContact {
+        flex-direction: column-reverse;
+        margin: 100px 0;
+        align-items: center;
+        padding: 10px 0px;
+        width: 95%;
+    }
+
+    .contactForm {
+        width: 90%;
+    }
+
+    .contactForm form .outer__button {
+        width: 80%;
+    }
+
+    .contactForm form {
+        padding: 3%;
+        justify-content: center;
+    }
+
+    .mainContact .right {
+        font-size: 15px;
+        margin-top: 0px;
+        width: 90%;
+        margin: 50px 0;
+    }
+}

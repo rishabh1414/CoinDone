@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,500;1,600;1,700;1,800&display=swap');
+@import url('./components/style/Navbar.css');
+
+@import url('./components/style/Header.css');
+@import url('./components/style/Footer.css');
+@import url('./pages/style/Homepage.css');
+@import url('./pages/style/Team.css');
+@import url('./pages/style/Contact.css');
+
+:root {
+    --mainColorLight: #ffdd07;
+    --mainColor: #f1b308;
+    --mainColorDark: #be8d06;
+    --darkBlueLight: #0046a6;
+    --darkBlue: #002d67;
+    --darkBlueDark: #001634;
+}
+
+*::selection {
+    background-color: #000;
+    color: var(--mainColor)
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+
+
+::-webkit-scrollbar-track {
+    background-color: var(--darkBlueDark);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--mainColorDark);
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}

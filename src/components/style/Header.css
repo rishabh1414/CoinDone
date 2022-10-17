@@ -1,0 +1,158 @@
+:root {
+    --mainColorLight: #ffdd07;
+    --mainColor: #f1b308;
+    --mainColorDark: #be8d06;
+    --darkBlueLight: #0046a6;
+    --darkBlue: #002d67;
+    --darkBlueDark: #001634;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #00377ea7, #010c1be1, #010c1b), url('../../../public/images/dubai-Header.jpg');
+    background-position: center;
+    background-size: cover;
+
+    background-attachment: fixed;
+    font-size: 20px;
+}
+
+header .heading {
+    display: flex;
+    padding: 10%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 80%;
+    padding-top: 25%;
+}
+
+header .heading h2 {
+    text-align: left;
+    font-size: 2.8em;
+    color: var(--mainColorDark);
+    -webkit-text-stroke-width: 1.8px;
+    -webkit-text-stroke-color: #002d67;
+    -webkit-text-fill-color: #f1b308;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+header .heading p {
+    color: whitesmoke;
+    font-size: 1.5em;
+    margin: 10px 0px;
+    -webkit-text-stroke-width: 1.1px;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-fill-color: #fff;
+    margin-bottom: 90px;
+}
+
+/* .button {
+    background-color: rgba(0, 0, 0, 0.389);
+    border: 1px solid white;
+    padding: 19px 40px;
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-size: 0.7em;
+    transition: all 1s ease;
+    text-decoration: none;
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.519);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.button span {
+    font-size: 35px;
+    margin-left: 20px;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+    background-color: var(--mainColorDark);
+    color: black;
+    border-color: black;
+
+
+} */
+
+/* *    Animation */
+.outer__button {
+    background-color: rgba(0, 0, 0, 0.389);
+    border: 1px solid white;
+    padding: 19px 20px;
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-size: 0.7em;
+    transition: all 1s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.outer__button a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* LEFT TO RIGHT */
+.button__left-right {
+    border: 2px solid white;
+    background: linear-gradient(to right, var(--mainColorDark) 50%, rgba(17, 25, 40, 0.113) 50%);
+    background-size: 200% 100%;
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.519);
+    background-position: right;
+    transition: all .35s ease-out;
+}
+
+.button__left-right:hover {
+    background-position: left;
+    color: #fff;
+    border: 2px solid black;
+}
+
+.button:hover a {
+    color: black;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        font-size: 15px;
+    }
+
+    header .heading {
+        padding: 5%;
+    }
+
+    header .heading h2 {
+        color: var(--mainColorDark);
+        -webkit-text-stroke-width: 1.8px;
+        margin-top: 60px;
+    }
+
+    header .heading p {
+        color: whitesmoke;
+        margin: 10px 0px;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: #000;
+        -webkit-text-fill-color: #fff;
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,151 @@
+:root {
+    --mainColorLight: #ffdd07;
+    --mainColor: #f1b308;
+    --mainColorDark: #be8d06;
+    --darkBlueLight: #0046a6;
+    --darkBlue: #002d67;
+    --darkBlueDark: #001634;
+}
+
+#team {
+    background: linear-gradient(to bottom, #010c1bb3, #010c1bbe), url('../../../public/images/team.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#team .cover {
+    height: 100%;
+    background: url(https://assets-global.website-files.com/6169ba9ec27ad249db9299fb/61803930164e0f7f7fa0eb17_geo-twist%20-%20Purple.svg);
+    background-position: right;
+    background-size: auto, contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 1;
+    padding: 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+#team .cover h3 {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 4em;
+    -webkit-text-stroke-width: 4.5px;
+    -webkit-text-stroke-color: #002d67;
+    -webkit-text-fill-color: #f1b308;
+}
+
+.teamBox {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.teamBox img {
+    height: 18rem;
+    width: 18rem;
+    border-radius: 50%;
+    padding: 1%;
+    margin: 15px;
+    border: 0.2px solid var(--mainColor);
+
+}
+
+.teamcontent {
+    padding: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.teamcontent1 {
+    border-top: 1px dashed var(--mainColor);
+    border-right: 4px dashed var(--mainColor);
+    border-bottom: 1px dashed var(--mainColor);
+}
+
+.teamcontent2 {
+    border-left: 1px dashed var(--mainColor);
+    border-bottom: 1px dashed var(--mainColor);
+}
+
+.teamcontent3 {
+    border-right: 4px dashed var(--mainColor);
+    border-bottom: 1px dashed var(--mainColor);
+}
+
+.teamcontent h4 {
+    font-weight: 500;
+    font-size: 1.5em;
+    color: var(--mainColorDark);
+}
+
+.teamcontent h4 .teamTitle {
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-left: 10px;
+    padding-left: 10px;
+    color: gray;
+    line-height: 10px;
+    border-left: 2px solid var(--mainColor);
+}
+
+.teamcontent p {
+    font-weight: 200;
+    font-size: 1em;
+    color: whitesmoke;
+    margin: 15px 0px;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #team .cover {
+        font-size: 17px;
+        padding: 40px 0;
+    }
+
+    .teamBox {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .teamBox img {
+        height: 10em;
+        width: 10em;
+    }
+
+    .teamcontent1,
+    .teamcontent2,
+    .teamcontent3 {
+        border: none;
+    }
+
+    .teamcontent {
+        padding: 5px;
+    }
+
+    .teamBox1 {
+        border-top: 1px dashed var(--mainColor);
+        border-right: 4px dashed var(--mainColor);
+        border-bottom: 1px dashed var(--mainColor);
+    }
+
+    .teamBox2 {
+        border-left: 1px dashed var(--mainColor);
+        border-bottom: 1px dashed var(--mainColor);
+    }
+
+    .teamBox3 {
+        border-right: 4px dashed var(--mainColor);
+        border-bottom: 1px dashed var(--mainColor);
+    }
+
+
+}
