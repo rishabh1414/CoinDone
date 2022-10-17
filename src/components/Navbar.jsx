@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 const logo = new URL("../../public/images/logo.png", import.meta.url);
 
 export default function Navbar() {
@@ -19,6 +20,8 @@ export default function Navbar() {
 
   window.addEventListener("scroll", changeBackground);
   let toggleClass = btnState ? "open" : null;
+  let icon = btnState ? "openicon" : null;
+
   let activeClass = navbar ? "active" : null;
   return (
     <>
@@ -49,6 +52,17 @@ export default function Navbar() {
           <Link className="a" to="/contact-us" data-hover="Contact Us">
             Contact Us
           </Link>
+          <div className={`close ${icon}`}>
+            <div className="navicon">
+              <i>
+                <FaFacebookF />
+              </i>
+              <i>
+                <FaInstagram />
+              </i>
+            </div>
+            <p> &#169; CoinDone Digital assets management</p>
+          </div>
         </ul>
       </nav>
     </>
