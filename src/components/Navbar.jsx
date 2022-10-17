@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 const logo = new URL("../../public/images/logo.png", import.meta.url);
 
 export default function Navbar() {
@@ -21,7 +21,7 @@ export default function Navbar() {
   window.addEventListener("scroll", changeBackground);
   let toggleClass = btnState ? "open" : null;
   let icon = btnState ? "openicon" : null;
-
+  let cross = btnState ? "line1" : null;
   let activeClass = navbar ? "active" : null;
   return (
     <>
@@ -34,31 +34,36 @@ export default function Navbar() {
           </div>
         </div>
         <div className="humberger" onClick={toggleHum}>
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
+          <div className={`line ${cross}`}></div>
+          <div className={`line ${cross}`}></div>
+          <div className={`line ${cross}`}></div>
         </div>
 
         <ul
           className={`link-effect-4 nav-links ${toggleClass}`}
           id="link-effect-4"
         >
-          <Link className="a" to="/" data-hover="Home">
-            Home
-          </Link>
-          <Link className="a" to="/team" data-hover="Our Team">
-            Our Team
-          </Link>
-          <Link className="a" to="/contact-us" data-hover="Contact Us">
-            Contact Us
-          </Link>
+          <div className="links">
+            <Link className="a" to="/" data-hover="Home">
+              Home
+            </Link>
+            <Link className="a" to="/team" data-hover="Our Team">
+              Our Team
+            </Link>
+            <Link className="a" to="/contact-us" data-hover="Contact Us">
+              Contact Us
+            </Link>
+          </div>
           <div className={`close ${icon}`}>
             <div className="navicon">
               <i>
-                <FaFacebookF />
+                <FaInstagram />
               </i>
               <i>
-                <FaInstagram />
+                <FaTwitter />
+              </i>
+              <i>
+                <FaLinkedinIn />
               </i>
             </div>
             <p> &#169; CoinDone Digital assets management</p>
